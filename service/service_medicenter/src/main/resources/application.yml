@@ -1,0 +1,27 @@
+debug: true
+
+logging:
+  level:
+    web: debug
+
+server:
+  port: 8810
+
+spring:
+  application:
+    name: sevice-medical-center
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/czhang_medicenter?characterEncoding=utf-8&userSSL=false
+    username: root
+    password: admin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: java.text.SimpleDateFormat
+    time-zone: GMT+10
